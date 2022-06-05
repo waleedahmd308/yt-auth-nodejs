@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm OTP</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1>Confirm OTP</h1>
+      <% if (messages) { %>
+      <p><%= messages.error %></p>
+      <% } %>
+      <form action="/confirm-otp" method="POST">
+        <input type="number" id="otp" name="otp" placeholder="Enter OTP" min="4" required><br><br>
+       
+        <button type="submit">Confirm</button><br><br>
+        <p id="demo" style=" text-align: center;
+        font-size: 60px;
+        margin-top: 0px;"></p>
+        
+        
+      </form><br><br>
+
+      <form action="/forgot-password" method="POST">
+        <input type="email" id="recmail" name="recmail" placeholder="Enter email" required><br><br>
+       
+        <button type="submit">Resend OTP</button><br>
+        
+        
+      </form>
+
+ 
+
+
+      <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+            
+          // Time calculations for days, hours, minutes and seconds
+       
+          
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          // Output the result in an element with id="demo"
+          document.getElementById("demo").innerHTML =   seconds + "s ";
+            
+          // If the count down is over, write some text 
+          if (seconds == 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+            location.reload();
+          }
+        }, 1000);
+        </script>
+      
+    </div>
+  </body>
+</html>
+
+
+

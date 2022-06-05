@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset password</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1>Reset password</h1>
+      <% if (messages) { %>
+      <p><%= messages.error %></p>
+      <% } %>
+      <form action="/reset-pass" method="POST">
+        <input
+        type="email"
+        name="recmail"
+       
+        placeholder="Enter email"
+        required
+      />
+        <input type="password" name="prevpass" id="prevpass" placeholder="Previous password" />
+        <input type="password" name="newpass" id="newpass" placeholder="New password" />
+        <input type="password" name="confirmpass" placeholder="Confirm password" />
+        <button>Reset</button><br>
+        
+       
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/assets/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<div class="w3-teal">
+</head>
+<body>
+  <div  class=" bg-primary ">
+    <div class="container  bg-primary">
+      <h1 class="text-white bg-dark">GMPlayers</h1>      
+      <p class="text-white bg-dark">Worlds most secure accounts dealing website.</p>
+    </div>
+  </div>
+  
+  <nav class=" bg-primary navbar navbar-inverse ">
+    <div class=" container-fluid ">
+      <div class=" navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">Logo</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Upgrade</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <center>
+      <br>
+      <br>
+      <br>
+      <h2>
+          data was not found...
+      </h2>
+  </center>
+<div>
+    <a class="plus" onclick="openForm()" style="background-color: rgb(65, 196, 85);"><i class="fa fa-plus" style=" font-size:20px;color:black; margin: 10px;">sell account</i></a>
+</div>
+
+<div class="form-popup" id="myForm">
+  <form action="/addaccount" method="post" class="form-container">
+    <h1>Add account info</h1>
+
+    <label for="tit"><b>Tittle</b></label>
+    <input type="text" placeholder="Enter Tittle" name="title" required>
+
+    <label for="dis"><b>Discription</b></label>
+    <input type="text" placeholder="Enter Discription" name="description" required>
+
+    <label for="u"><b>Image Url</b></label>
+    <input type="url" id="u" name="urlimage"><br><br>
+
+    <button type="submit" class="btn">Add</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+</html> 

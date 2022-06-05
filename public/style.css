@@ -7,7 +7,11 @@
 }
 
 body {
-  background-color: #6a5acd;
+  background-image: url("gamebackground.jpg");
+  background-color:orange;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   display: grid;
   place-items: center;
   width: 100vw;
@@ -55,3 +59,9 @@ body {
 .main > form > button:focus {
   outline: none;
 }
+
+p{
+  color: #6a5acd;
+}
+
+

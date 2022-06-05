@@ -11,8 +11,9 @@ function checkAuthenticated(req, res, next) {
   }
   res.redirect("/login");
 }
-
 module.exports = {
   checkNotAuthenticated,
   checkAuthenticated,
+
+  
 };

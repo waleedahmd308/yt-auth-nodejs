@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Report</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100;400;500;600;700&display=swap");
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:orange;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Encode Sans SC", sans-serif;
+}
+
+.main {
+  width: 500px;
+  max-width: 90%;
+  text-align: center;
+  background-color: white;
+  padding: 25px 20px;
+  border-radius: 10px;
+}
+
+.main > h1 {
+  font-size: 30px;
+  color: rgb(26, 25, 25);
+  margin: 0 0 30px 0;
+}
+
+.main > form > input {
+  width: 95%;
+  padding: 15px;
+  background-color: #ccc;
+  color: gray;
+  border: 0;
+  margin: 10px 5px;
+  border-radius: 8px;
+}
+
+.main > form > textarea {
+  width: 95%;
+  padding: 15px;
+  background-color: #ccc;
+  color: gray;
+  border: 0;
+  margin: 10px 5px;
+  border-radius: 8px;
+}
+
+.main > form > button {
+  background-color: #6a5acd;
+  padding: 15px;
+  width: 95%;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.main > form > input:focus,
+.main > form > button:focus {
+  outline: none;
+}
+
+p{
+  color: #6a5acd;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Report user</h1>
+    
+      <form action="/reportuser" method="POST">
+        <input
+          type="text"
+          name="user"
+          placeholder="Your Username"
+          required
+        />
+        <input type="text" name="reportedusr" placeholder="Reported user's identity" required/>
+        <textarea id="desc" name="description" rows="15" cols="55" required/>
+         </textarea>
+        <button>Submit report</button><br>
+        
+      </form>
+    </div>
+  </body>
+</html>
